@@ -1,7 +1,6 @@
 {
-  "name": "InventarioSistema",
+  "name": "inventariosistema",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/index.js"
@@ -16,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hutini/BackEndMean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hutini/BackEndMean/issues"
+  },
+  "homepage": "https://github.com/Hutini/BackEndMean#readme",
+  "description": ""
 }

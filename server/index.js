@@ -15,6 +15,12 @@ app.use(express.json());
 app.use('/api/productos',require('./routes/producto.routers'));
 app.use('/api/usuarios',require('./routes/usuario.routers'));
 app.use('/api/proovedores',require('./routes/proovedor.routers'));
+app.use('/api/ingresoMateriales',require('./routes/ingresoMaterial.routers'));
+app.use('/api/salidaMateriales',require('./routes/salidaMaterial.routers'));
+app.use('/api/controlBodegas',require('./routes/controlBodega.routers'));
+app.use('/api/irregularidades',require('./routes/irregularidad.routers'));
+app.use('/api/controlMateriales',require('./routes/controlMaterial.routers'));
+app.use('/api/alertas',require('./routes/alerta.routers'));
 
 
 app.listen(app.get('port'), () => {

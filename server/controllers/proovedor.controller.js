@@ -6,7 +6,7 @@ proovedorCtrl.getProovedores = async (req , res) => {
     res.json(proovedores);
 };
 
-proovedorCtrl.createProoverdor = async (req, res ) => {
+proovedorCtrl.createProovedor = async (req, res ) => {
     const proovedor = new Proovedor(req.body);
     await proovedor.save();
     res.json('Proovedor Guardado');
