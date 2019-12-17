@@ -7,7 +7,11 @@ productoCtrl.getProductos = async (req , res) => {
 };
 
 productoCtrl.createProducto = async (req, res ) => {
-    const producto = new Producto(req.body);
+    const producto = new Producto({
+        codigo: req.body.codigo,
+        descripcion: req.body.descripcion,
+        lugar: req.body.lugar
+    });
     await producto.save();
    res.json('Producto Guardado');
 };

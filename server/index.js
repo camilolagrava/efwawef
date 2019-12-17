@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
 const app = express();
 
 const { mongoose } = require('./database');
@@ -10,6 +11,7 @@ app.set('port', process.env.PORT || 4000);
 //puede que esto de morman no me de  porque no me salia
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors({origin: 'http://localhost:4200'}));
 
 //Routes
 app.use('/api/productos',require('./routes/producto.routers'));
