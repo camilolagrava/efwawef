@@ -6,6 +6,10 @@ jobs:
   build:
     name: intento de compilacion
     runs-on: ubuntu-latest
+    
+    services:
+       mongodb:
+        image: mongo:3.4.23
 
     strategy:
       matrix:
