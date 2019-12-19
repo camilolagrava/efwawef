@@ -9,6 +9,7 @@ jobs:
 
     strategy:
       matrix:
+        mongodb-version: ["4.0", "4.2"] 
         node-version: [8.x, 10.x, 12.x]
 
     steps:
@@ -19,6 +20,10 @@ jobs:
           mongodb-version: v4.2.2
       - name: ir al directorioo
         run: ls
+      - name: Launch MongoDB
+        uses: wbari/start-mongoDB@v0.2
+        with:
+         mongoDBVersion: ${{ matrix.mongodb-version }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
