@@ -6,10 +6,6 @@ jobs:
   build:
     name: intento de compilacion
     runs-on: ubuntu-latest
-    
-    services:
-       mongodb:
-        image: mongo:3.4.23
 
     strategy:
       matrix:
@@ -17,6 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - name: MongoDB in GitHub Actions
+        uses: superchargejs/mongodb-github-action@1.1.0
+         with:
+    # MongoDB version to use
+          mongodb-version: # optional, default is latest
       - name: ir al directorioo
         run: ls
       - name: Use Node.js ${{ matrix.node-version }}
